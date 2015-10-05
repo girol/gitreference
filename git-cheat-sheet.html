@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Git - Cheat Sheet</title>
+        <meta charset="UTF-8" lang="pt-br">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <h1>Git - Cartão de Referência</h1>
+
+        <h2>Help</h2>
+        <p>
+            <strong>git help</strong> <em>[verbo]</em> <br>
+            <strong> git</strong> <em>[verbo]</em> <strong>--help</strong> <br>
+            <strong>man git-</strong><em>[verbo]</em><br>
+        </p>
+
+
+        <h2>Configuração Inicial</h2>
+
+        <p>
+            <strong>git config</strong> <em>[opção] [parâmetro]</em><br>
+            opção: <strong>--system</strong> (todo o sistema)<br>
+            edita o arquivo: <em>/etc/gitconfig</em><br>
+        </p>
+
+        <p>
+            opção: <strong>--global</strong> (apenas o usuário)<br>
+            edita o arquivo: <em>~/.gitconfig</em>
+        </p>
+
+        <p>
+            opção: <strong>--list</strong> <br>
+            Mostra configurações atuais do ambiente git
+        </p>
+
+        <p>
+            Edite o arquivo: <em>[repositorio]</em><strong>/gitconfig</strong><br>
+            Configuração válida apenas para aquele repositório
+        </p>
+
+        <p>
+            <em>[parâmetro]:</em> <strong>alias.{nome_alias} {'comando'}</strong><br>
+            Cria um alias para um comando específico.<br>
+            <em>Exemplo:</em><br>
+            <span class="code">
+                git config --global alias.unstage 'reset HEAD --'
+            </span>
+        </p>
+
+
+
+    </body>
+</html>

@@ -1,0 +1,26 @@
+@font-face {
+    font-family: Inconsolata;
+    src: url(fonts/Inconsolata.otf);
+}
+
+* {
+    font-family: Inconsolata, sans-serif;
+    
+}
+
+h2 {
+    text-decoration: underline;
+    font-weight: normal;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.code {
+    margin: 5px;
+    background-color: #EBF1F8;
+    font-style: italic;
+    font-weight: bold;
+
+}

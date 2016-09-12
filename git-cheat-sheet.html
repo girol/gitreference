@@ -4,12 +4,13 @@
         <title>Git - Cheat Sheet</title>
         <meta charset="UTF-8" lang="pt-br">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="style.css">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
 
     </head>
     <body>
-        <h1><span class="fa fa-github"></span> Git - Cartão de Referência</h1>
+        <h1><i class="fa fa-github"></i> Git - Cartão de Referência</h1>
 
         <h2><i class="fa fa-life-ring"></i> Help</h2>
         <p>
@@ -51,7 +52,34 @@
             </span>
         </p>
 
+        <h2><i class="fa fa-database"></i> Repositórios</h2>
+        <p>
+            <strong>git init</strong><br>
+            Inicializa repositório no modo <em>working dir</em> (.git dir)
+        </p>
 
+        <p>
+            <strong>git init --bare</strong><br>
+            Inicializa repositório no modo repositório (compartilhável)
+        </p>
+        <p>
+            <strong>git clone </strong><em>[origem] [destino]</em><br>
+            clona repositório e seus atributos (local ou remoto)
+        </p>
 
+        <p>
+            <strong>git remote</strong> <em>[opções]</em><br>
+            verifica e configura repositórios remotos ou no mesmo filesystem
+        </p>
+        <p>
+            opção: <strong>-v</strong> (apenas o usuário)<br>
+            Mostra detalhes dos remotos
+        </p>
+
+        <p>
+            <strong>git remote add</strong> <em>[nome] [url]</em><br>
+            adiciona um repositório remoto ao projeto atual
+
+        </p>
     </body>
 </html>

@@ -1,85 +1,135 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Git - Cheat Sheet</title>
-        <meta charset="UTF-8" lang="pt-br">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+    <title>Git - Cheat Sheet</title>
+    <meta charset="UTF-8" lang="pt-br">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <link rel="stylesheet" type="text/css" href="css/style.css">
-        <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
 
-    </head>
-    <body>
-        <h1><i class="fa fa-github"></i> Git - Cartão de Referência</h1>
+</head>
+<body>
+    <h1><i class="fa fa-github"></i> Git - Cartão de Referência</h1>
 
-        <h2><i class="fa fa-life-ring"></i> Help</h2>
-        <p>
-            <strong>git help</strong> <em>[verbo]</em> <br>
-            <strong> git</strong> <em>[verbo]</em> <strong>--help</strong> <br>
-            <strong>man git-</strong><em>[verbo]</em><br>
-        </p>
+    <h2><i class="fa fa-life-ring"></i> Help</h2>
+    <p>
+        <strong>git help</strong> <em>[verbo]</em> <br>
+        <strong> git</strong> <em>[verbo]</em> <strong>--help</strong> <br>
+        <strong>man git-</strong><em>[verbo]</em><br>
+    </p>
 
 
-        <h2><i class="fa fa-cogs"></i> Configuração Inicial</h2>
+    <h2><i class="fa fa-cogs"></i> Configuração Inicial</h2>
 
-        <p>
-            <strong>git config</strong> <em>[opção] [parâmetro]</em><br>
-            opção: <strong>--system</strong> (todo o sistema)<br>
-            edita o arquivo: <em>/etc/gitconfig</em><br>
-        </p>
+    <p>
+        <strong>git config</strong> <em>[opção] [parâmetro]</em><br>
+        opção: <strong>--system</strong> (todo o sistema)<br>
+        edita o arquivo: <em>/etc/gitconfig</em><br>
+    </p>
 
-        <p>
-            opção: <strong>--global</strong> (apenas o usuário)<br>
-            edita o arquivo: <em>~/.gitconfig</em>
-        </p>
+    <p>
+        opção: <strong>--global</strong> (apenas o usuário)<br>
+        edita o arquivo: <em>~/.gitconfig</em>
+    </p>
 
-        <p>
-            opção: <strong>--list</strong> <br>
-            Mostra configurações atuais do ambiente git
-        </p>
+    <p>
+        opção: <strong>--list</strong> <br>
+        Mostra configurações atuais do ambiente git
+    </p>
 
-        <p>
-            Edite o arquivo: <em>[repositorio]</em><strong>/gitconfig</strong><br>
-            Configuração válida apenas para aquele repositório
-        </p>
+    <p>
+        Edite o arquivo: <em>[repositorio]</em><strong>/gitconfig</strong><br>
+        Configuração válida apenas para aquele repositório
+    </p>
 
-        <p>
-            <em>[parâmetro]:</em> <strong>alias.{nome_alias} {'comando'}</strong><br>
-            Cria um alias para um comando específico.<br>
-            <em>Exemplo:</em><br>
-            <span class="code">
-                git config --global alias.unstage 'reset HEAD --'
-            </span>
-        </p>
+    <p>
+        <em>[parâmetro]:</em> <strong>alias.{nome_alias} {'comando'}</strong><br>
+        Cria um alias para um comando específico.<br>
+        <em>Exemplo:</em><br>
+        <span class="code">
+            git config --global alias.unstage 'reset HEAD --'
+        </span>
+    </p>
 
-        <h2><i class="fa fa-database"></i> Repositórios</h2>
-        <p>
-            <strong>git init</strong><br>
-            Inicializa repositório no modo <em>working dir</em> (.git dir)
-        </p>
+    <h2><i class="fa fa-database"></i> Repositórios</h2>
+    <p>
+        <strong>git init</strong><br>
+        Inicializa repositório no modo <em>working dir</em> (.git dir)
+    </p>
 
-        <p>
-            <strong>git init --bare</strong><br>
-            Inicializa repositório no modo repositório (compartilhável)
-        </p>
-        <p>
-            <strong>git clone </strong><em>[origem] [destino]</em><br>
-            clona repositório e seus atributos (local ou remoto)
-        </p>
+    <p>
+        <strong>git init --bare</strong><br>
+        Inicializa repositório no modo repositório (compartilhável)
+    </p>
+    <p>
+        <strong>git clone </strong><em>[origem] [destino]</em><br>
+        clona repositório e seus atributos (local ou remoto)
+    </p>
 
-        <p>
-            <strong>git remote</strong> <em>[opções]</em><br>
-            verifica e configura repositórios remotos ou no mesmo filesystem
-        </p>
-        <p>
-            opção: <strong>-v</strong> (apenas o usuário)<br>
-            Mostra detalhes dos remotos
-        </p>
+    <p>
+        <strong>git remote</strong> <em>[opções]</em><br>
+        verifica e configura repositórios remotos ou no mesmo filesystem
+    </p>
+    <p>
+        opção: <strong>-v</strong> (apenas o usuário)<br>
+        Mostra detalhes dos remotos
+    </p>
 
-        <p>
-            <strong>git remote add</strong> <em>[nome] [url]</em><br>
-            adiciona um repositório remoto ao projeto atual
+    <p>
+        <strong>git remote add</strong> <em>[nome] [url]</em><br>
+        adiciona um repositório remoto ao projeto atual
 
-        </p>
-    </body>
+    </p>
+
+    <h2> <i class="fa fa-code"></i> Versionamento </h2>
+
+    <p> 
+        <strong>git status</strong><br>
+        - verifica o estado do seu working dir.<br>
+        <em>(untracked, unmodified, modified, staged)</em> <br>
+        opção: <strong>-s</strong> ou <strong>--short</strong> - Mostra versão compacta do status
+    </p>
+
+    <p>
+        <strong>git rm</strong> <em>[arquivo] [opções]</em> <br>
+        - remove arquivos do repositório e do seu working dir.
+    </p>
+
+    <p>
+        <strong>git commit </strong> <em>[opções]</em> <br>
+        - grava arquivos do stage para o repositório <br>
+    </p>
+    <p>
+        Sem parâmetros abre o editor de texto para que você escreva
+        sua mensagem de commit
+    </p>
+
+    <p>
+        <strong>git log</strong> <em>[opções]</em> <br>
+        - mostra histórico de commits
+    </p>
+
+    <p>
+
+
+    opção: <strong>--stat</strong> - mostra pequeno resumo de alterações nos arquivos
+
+    opção: <strong>--pretty=<parâmetro></strong> - diversas opções de formatação do log 
+
+        - parâmetro: oneline – mostra uma lista abreviada de commit + mensagem de commit
+
+        - parâmetro: format: “<formato>” - Formata saída do log conforme preferência do usuário.
+        Exemplo para teste:
+        <pre>
+            git log --pretty=format:“%h - %an, %ar : %s”
+        </pre>    
+    </p>
+
+    git tag <nome da tag>
+    - marca versão do software (release point), no commit atual
+
+    opção: -a – cria uma tag anotada (mais informações são adicionadas)
+
+</body>
 </html>
